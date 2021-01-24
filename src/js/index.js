@@ -34,24 +34,12 @@ const loadHaste = () => {
     area.value = hValue;
 }
 
-const clearHaste = () => {
-    area.value = " ";
-    localStorage.removeItem("hasteValue");
-}
-
 area.addEventListener('input', () => {
     saveHaste(area.value);
 });
 
-iconClear.addEventListener('click', () => {
-    clearHaste()
-});
-iconInfo.addEventListener('click', () => {
-    goToNew('./about');
-});
-
 heroImage.addEventListener('click', () => {
-    goTo('https://therevq.pl');
+    goTo('./');
 });
 
 loadHaste();
